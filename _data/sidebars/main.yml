@@ -9,14 +9,3 @@ subitems:
     url: /main/contributors
   - title: User Guide
     url: /user-guide/
-    subitems:
-      - title: Accessing the service
-        url: /user-guide/service-access
-      - title: Logging in
-        url: /user-guide/loggin
-      - title: Configure and use compute environments
-        url: /user-guide/compute-env
-      - title: Adding workflows
-        url: /user-guide/add-workflow
-      - title: Recommendations
-        url: /user-guide/hpc-recommendations
