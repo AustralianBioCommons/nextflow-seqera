@@ -9,9 +9,6 @@ page_id: pg-1
 
 ## Access an organisation workspace
 
-Accessing an organisation workspace requires joining the [Australian Nextflow Seqera Service](nextflow-seqera/index.md).
-
-
 1. Login to the Australian Nextflow Seqera Service and share your email with BioCommons.
 
 2. BioCommons will create a workspace for you and add you as an administrator to the workspace.
