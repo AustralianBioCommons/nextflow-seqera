@@ -1,4 +1,4 @@
-title: "Aus Nextflow Seqera"
+title: "Australian Nextflow Seqera Service"
 description: A website for the Australian Nextflow Seqera service
 remote_theme: ELIXIR-Belgium/jekyll-bootstrap-theme@2.4.0
 topnav_title: Australian Nextflow Seqera Service
@@ -9,7 +9,6 @@ theme_variables:
   topnav:
     brand_logo: assets/img/Australian-Biocommons-Logo-Horizontal-RGB.png
   privacy_statement_url: https://www.biocommons.org.au/privacy
-
 
 defaults:
   -

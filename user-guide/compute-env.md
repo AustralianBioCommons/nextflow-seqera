@@ -18,11 +18,11 @@ To access these compute infrastructures through Seqera, compute environments nee
 
 Seqera supports adding compute environments for HPCs that utilise [Slurm](https://docs.seqera.io/platform/latest/compute-envs/slurm/) and [PBS Pro](https://docs.seqera.io/platform/latest/compute-envs/altair-pbs-pro/) workload managers. 
 
-> Note: compute environments are shared across the users of the same workspace. 
+> Note: Compute environments are shared across all users of the same workspace. 
 
-In order to access compute infrastructre, you need to create access [credentials](https://docs.seqera.io/platform/latest/credentials/overview/#introduction). SSH keys or Tower agents can be used to access the HPC. SSH keys are easier to use but some HPC providers are restricted from sharing SSH keys with a third party (e.g. Seqera Platform). In addition, it can be tricky to use SSH keys if the HPC is in a private network and requires VPN access. 
+In order to access compute infrastructre, you need to create access [credentials](https://docs.seqera.io/platform/latest/credentials/overview/#introduction). SSH keys or Tower Agents can be used to access the HPC. SSH keys are easier to use but some HPC providers are restricted from sharing SSH keys with a third party (i.e. Seqera Platform). In addition, it can be tricky to use SSH keys if the HPC is within a private network and requires VPN access. 
 
-The following instructions is to configure compute environments for HPC through Tower agent credentials.
+The following instructions are to configure compute environments for HPC through Tower agent credentials.
 
 
 ### Steps to configure HPC on the Australian Nextflow Seqera Service within an organisation workspace
@@ -30,14 +30,14 @@ The following instructions is to configure compute environments for HPC through 
 Prerequisites for configuration on an organisation workspace:
 
 1.	You have access to an organisation workspace
-2.	The user has an owner or admin role within this workspace.
+2.	You have an owner or administrator role within this workspace.
 
 
 The following steps need to be completed in order unless they have been completed before and are to be reused.
 
 1.	Create Personal Token
-2.	Creating Tower agent credentials
-3.	Configuring the compute infrastructure
+2.	Create Tower Agent credentials
+3.	Configure the compute infrastructure
 
 
 **Detailed Instructions:**
@@ -51,7 +51,7 @@ The following steps need to be completed in order unless they have been complete
         </h2>
         <div id="collapse-access-token" class="accordion-collapse collapse" aria-labelledby="heading-access-token" data-bs-parent="#accordion-comp-env-all">
           <div class="accordion-body">  
-            You don’t need an access token if you intend to create SSH key credentials, but you will need it for the Tower agent credentials. 
+            You don’t need an access token if you intend to create SSH key credentials, but you will need it for the Tower Agent credentials. 
             <ul>
             <li>The user can create an access token as <a href="https://docs.seqera.io/platform/latest/api/overview/?h=access+token#authentication"> described here</a>.</li>
             <li>Keep it safe, create a new one if you lose it and delete lost tokens.</li>
@@ -69,15 +69,15 @@ The following steps need to be completed in order unless they have been complete
     <div class="accordion-item">
         <h2 class="accordion-header" id="heading-tower-agent" style="margin-top:0rem">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tower-agent" aria-expanded="false" aria-controls="collapse-tower-agent">
-            Creating Tower agent credentials
+            Creating Tower Agent credentials
           </button>
         </h2>
         <div id="collapse-tower-agent" class="accordion-collapse collapse" aria-labelledby="heading-tower-agent" data-bs-parent="#accordion-comp-env-all">
           <div class="accordion-body">
-            <p><a href="https://docs.seqera.io/platform/latest/agent/">Tower agent </a> is software that runs on the HPC and communicates with Seqera API to perform all tasks needed on the HPC including launching a pipeline and monitoring its execution. For an admin to create a tower agent credential, follow the following steps:</p>
+            <p><a href="https://docs.seqera.io/platform/latest/credentials/agent_credentials">Tower Agent</a> is software that runs on the HPC and communicates with the Seqera API to perform all tasks needed on the HPC, including launching a pipeline and monitoring its execution. For an admin to create a tower agent credential, follow these steps:</p>
             <ol>
                 <li>Navigate to the workspace you want to add credentials to, then click on the <code>Credentials</code> tab.</li>
-                <li>Click on the <code>Add Credentials</code> button under <code>Credentials</code> to create a shared <code>Agent connection ID</code> for the tower agent.</li>
+                <li>Click on the <code>Add Credentials</code> button under <code>Credentials</code> to create a shared <code>Agent connection ID</code> for the Tower Agent.</li>
                 <li>A wizard interface will appear, with some scripts in the <code>Usage</code> box and fields to complete.</li>
                 <br/>
                 <div style="text-align:center"><img width="50%" src="../assets/doc_img/agent.png"/></div>
@@ -88,9 +88,9 @@ The following steps need to be completed in order unless they have been complete
                     <ol>
                         <li>Keep the Agent interface open.</li>
                         <li>Log in to infrastructure (the HPC).</li>
-                        <li>In theory, you can run the agent from anywhere on the HPC. See our [best practices](/user-guide/hpc-recommendations) for some recommendations.</li>
-                        <li>Copy the usage script from the Agent interface to any text editor and edit the Access token to provide your own token created above and provide the path to the work directory for the agent.</li>
-                        <li>The work directory for the Agent (provided as a parameter in the command) must exist before running the agent.</li>
+                        <li>In theory, you can run the Agent from anywhere on the HPC. See our [best practices](/user-guide/hpc-recommendations) for some recommendations.</li>
+                        <li>Copy the usage script from the Agent interface to any text editor and edit the access token to provide your own token created above and provide the path to the work directory for the Agent.</li>
+                        <li>The work directory for the Agent (provided as a parameter in the command) must exist before running the Agent.</li>
                         <li>Run the edited script relevant to your infrastructure (PBS or SLURM) bash.</li>
                         <li>This script will download the Tower Agent script to the current work directory on the HPC and make it executable.</li>
                         <li>Then, it runs the Agent by providing the connection id and access token.</li>
@@ -99,7 +99,7 @@ The following steps need to be completed in order unless they have been complete
                     </ol>
                 </li>
             </ol>
-            <p>The steps above will help to create the credentials and understand the Agent&rsquo;s parameters and how it runs. In practice, this can be better optimised by having all scripts and tokens in config files and bash scripts. See best practice recommendations. The procedure is also described in the Seqera documentation at <a href="https://docs.seqera.io/latest/agent/#quickstart">Quick Start</a>.</p>
+            <p>The steps above will help to create the credentials and understand the Agent&rsquo;s parameters and how it runs. In practice, this can be better optimised by having all scripts and tokens in config files and bash scripts. See [best practice recommendations](/user-guide/hpc-recommendations). The procedure is also described in the Seqera documentation at <a href="https://docs.seqera.io/platform/latest/credentials/agent_credentials">Quick Start</a>.</p>
             <div class="alert alert-primary" role="alert">
             <h4 class="alert-heading">Note</h4>
             <p>Users of the same workspace share credentials, so there is no need to create a credential per user within a workspace.</p>
@@ -138,7 +138,7 @@ The following steps need to be completed in order unless they have been complete
                 </li>
                 <li>Select workdirectory 
                     <ul>
-                        <li>This can remain as $TW_AGENT_WORK or specify your own</li>
+                        <li>This can remain as <code>$TW_AGENT_WORK</code> or specify your own</li>
                     </ul>
                 </li>
                 <li>Leave the launch directory field empty.</li>
@@ -170,32 +170,32 @@ The following steps need to be completed in order unless they have been complete
 </div>
 
 
-### Utilising compute environment with tower agent
+### Utilising compute environment with Tower Agent
 
-There are a few points to be considered when using tower agent:
+There are a few points to be considered when using Tower Agent:
 
 1. The users of a workspace will share the same compute environment and credentials.
 2. Each user needs to create their own personal access token.
-3. Each user needs to run Tower agent on their account on the HPC.
-4. Each user needs to pass their personal access token and the shared connection id (of the credential) to their instance of tower agent on the HPC.
+3. Each user needs to run Tower Agent on their account on the HPC.
+4. Each user needs to pass their personal access token and the shared connection id (of the credential) to their instance of Tower Agent on the HPC.
 
 To do that:
 
 1. Create a personal access token or use a pre-created access token as described here (access1).
 2. Obtain the connection id for the compute environment from its credential page (conn_id).
-3. Run Tower agent using access1 and conn_id, and an independent work directory (any directory you have access to).
+3. Run Tower Agent using access1 and conn_id, and an independent work directory (any directory you have access to).
 4. The compute environment will be available and usable as long as the agent is running.
 
 <div class="alert alert-primary" role="alert">
     <h4 class="alert-heading">Note</h4>
-     <p>Tower agent does not support service accounts on the HPC. In other words, you can not use one agent for multiple users on tower.</p>
+     <p>Tower Agent does not support service accounts on the HPC. In other words, you can not use one Agent for multiple users.</p>
      <hr>
-     <p>The agent should be able to access the internet.</p>
+     <p>The Agent should be able to access the internet.</p>
 </div>
 
 ## Configuring commerical cloud
 
-The easiest way is using AWS Batch and tower forge permissions to allow tower to create the batch environment. In order to do this please follow this [documentation](https://docs.seqera.io/platform/latest/compute-envs/aws-batch/).
+The easiest way is using AWS Batch and Batch Forge permissions to allow tower to create the batch environment. In order to do this please follow this [documentation](https://docs.seqera.io/platform/latest/compute-envs/aws-batch/).
 
 ## Other infrastructures
 

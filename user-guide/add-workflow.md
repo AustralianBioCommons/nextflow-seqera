@@ -9,4 +9,4 @@ page_id: pg-4
 
 ## Add a new workflow to a workspace
 
-Please follow the steps mentioned at [Seqera documentation](https://docs.seqera.io/latest/launch/launchpad/#adding-a-new-pipeline) to add a pipeline. 
+Please follow the steps mentioned at [Seqera documentation](https://docs.seqera.io/platform/latest/launch/launchpad/#adding-a-new-pipeline) to add a pipeline. 

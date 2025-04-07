@@ -1,22 +1,27 @@
-title: Main
+title: Home
 title_url: /
 subitems:
-  - title: Join the pilot project
-    url: /main/join_us
+  - title: Service Information
+    subitems:
+      - title: Service Terms
+        url: /main/service-terms
+      - title: Access Models
+        url: /main/access-models
+      - title: Acceptable Use
+        url: /main/acceptable-use
+      - title: Service Commitments
+        url: /main/service-commitments
+      - title: Privacy
+        url: /main/privacy
+      - title: Service History
+        url: /main/service-history
+  - title: Service Support
+    url: /main/support
+  - title: Service Acknowledgement
+    url: /main/acknowledgement
   - title: Contact us
-    url: /main/contact_us
+    url: /main/contact-us
   - title: Contributors
     url: /main/contributors
   - title: User Guide
     url: /user-guide/
-    subitems:
-      - title: Accessing the service
-        url: /user-guide/service-access
-      - title: Logging in
-        url: /user-guide/loggin
-      - title: Configure and use compute environments
-        url: /user-guide/compute-env
-      - title: Adding workflows
-        url: /user-guide/add-workflow
-      - title: Recommendations
-        url: /user-guide/hpc-recommendations

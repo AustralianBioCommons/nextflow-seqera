@@ -16,7 +16,7 @@ Ziad Al-Bkhetan:
     git: ziadbkh
     email: ziad@biocommons.org.au
     orcid: 0000-0002-4032-5331
-    role: Service Owner
+    role: Product Manager
     affiliation: Australian BioCommons / University of Melbourne
 
 Johan Gustafsson:
@@ -26,4 +26,16 @@ Johan Gustafsson:
     role: Business analyst
     affiliation: Australian BioCommons / University of Melbourne
 
+Patrick Capon:
+    git: PatCapon39
+    email: patrick@biocommons.org.au
+    orcid: 000-0002-7396-5757
+    role: Editorial review
+    affiliation: Australian BioCommons / University of Melbourne
 
+Georgina Samaha:
+    git: georgiesamaha
+    email: georgina.samaha@sydney.edu.au
+    orcid: 0000-0003-0419-1476
+    role:
+    affiliation: Australian BioCommons / Sydney Informatics Hub at the University of Sydney

@@ -3,184 +3,28 @@ title: The Australian Nextflow Seqera Service
 toc: false
 ---
 
+# About the service
 
-## Project outline
+The Australian Nextflow Seqera Service provides access to a centralised web platform for managing, launching and monitoring the execution of Nextflow bioinformatics pipelines on [Seqera-compatible compute environments](https://docs.seqera.io/platform/latest/compute-envs/overview). Australian research organisations and individual researchers can add compute infrastructure they have access to and publish pipelines to private or shared workspaces to run data analyses at scale. The service provides access to all features available through the [Seqera Platform](https://seqera.io/platform/) including data exploration and analysis as well as notebook analysis.
 
-Through a licence agreement with Seqera Labs, Australian BioCommons is in the process of standing up a national Nextflow Seqera service, enabling a centralised command post for Nextflow pipelines to be offered as a fully subsidised service for Australian researchers.
-
-Working with partners including service hosts Pawsey Supercomputing Research Centre, NCI, SIH, QCIF and Melbourne Bioinformatics, the Australian Nextflow Seqera Service will deliver a key component of BioCommon’s vision for an ecosystem of data analysis and digital asset stewardship platforms.
-
-## Aims of the pilot project
-
-The pilot project has three key ambitions, which are to:
-
-1. Establish a service where BioCommons early adopters, including both science and method communities, can easily run, manage and monitor the execution of Nextflow workflows on dedicated compute infrastructure.
-
-2. Understand service demand and utilisation by working with BioCommons communities and assessing interest from other communities.
-
-3. Develop service operational models; understand costs and benefits; develop a business case for continuing the service.
-
-At the end of the pilot phase, Australian BioCommons will make the decision on providing this service for a long term. This depends on the feedback and outcomes of this pilot project. Successful use cases will play a major role in influencing the decision.
-
-## Service status
-
-Since investigations commenced in July 2022:
-
-- Nextflow Seqera has been deployed on Pawsey infrastructure
-
-- Researchers at AGRF, AusARG, UNSW and the University of Sydney are developing and running Nextflow pipelines to test the service
-
-- Test pipelines have been run on Pawsey, NCI, AGRF and AWS infrastructure
-
-- Research infrastructure teams at QUT and St Vincent’s institute medical research are exploring the use of the service
-
- <br />
-
-## Participants of the pilot project
-<div class="container">
-    <div class="row">
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">AGRF Bioinformatics Team</h5>
-                <p class="card-text">Australian Genome Research Facility</p>
-                <a href="https://www.agrf.org.au/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">AusARG Phylogenomics Group</h5>
-                <p class="card-text">Australian Amphibian and Reptile Genomics</p>
-                <a href="https://ausargenomics.com/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Zero Childhood Cancer</h5>
-                <p class="card-text">Children's Cancer Institute</p>
-                <a href="https://www.zerochildhoodcancer.org.au/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">eResearch Team</h5>
-                <p class="card-text">Queensland University of Technology</p>
-                <a href="https://www.qut.edu.au/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Data Science Platform</h5>
-                <p class="card-text">Garvan Institute of Medical Research</p>
-                <a href="https://www.garvan.org.au/research/platforms/data-science/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Northcott Neuroscience Laboratory</h5>
-                <p class="card-text">ANZAC Research Institute</p>
-                <a href="https://slhd.health.nsw.gov.au/concord-hospital-research/neurobiology-molecular-medicine/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Bioinformatics Consulting Core Facility </h5>
-                <p class="card-text">Peter MacCallum Cancer Centre</p>
-                <a href="https://www.petermac.org/research/research-technologies/bioinformatics" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">South Australian Genomics Centre</h5>
-                <p class="card-text">SAHMRI (South Australian Health and Medical Research Institute)</p>
-                <a href="https://sa-genomics.com.au/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">P4 Respiratory Health for Kids</h5>
-                <p class="card-text">Telethon Kids Institute</p>
-                <a href="https://slhd.health.nsw.gov.au/concord-hospital-research/neurobiology-molecular-medicine/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">University of Melbourne Centre for Cancer Research </h5>
-                <p class="card-text">University of Melbourne</p>
-                <a href="https://mdhs.unimelb.edu.au/centre-for-cancer-research" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Sydney Informatics Hub</h5>
-                <p class="card-text">The University of Sydney</p>
-                <a href="https://www.sydney.edu.au/research/facilities/sydney-informatics-hub.html" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">UWA ForrestLab</h5>
-                <p class="card-text">The Harry Perkins Institute of Medical Research</p>
-                <a class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Multiple groups from WEHI </h5>
-                <p class="card-text">Walter and Eliza Hall Institute of Medical Research</p>
-                <a href="https://www.wehi.edu.au/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="border: 1px solid; box-shadow: 3px 3px 3px 3px #888888; padding: 10px; margin: 20px" >
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Queensland Cyber Infrastructure Foundation (QCIF) </h5>
-                <p class="card-text">The University of Queensland</p>
-                <a href="https://www.qcif.edu.au/" class="btn btn-primary">Website</a>
-            </div>
-            </div>
-        </div>
-    </div>
+<div class="d-flex flex-column">
+  <div class="mb-2">
+    <button
+      class="btn btn-secondary text-light"
+      type="button"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      <a href="http://seqera.services.biocommons.org.au/" target="_blank" style="color: white;">Log in or register</a>
+    </button>
+  </div>
 </div>
 
-## Quick access links
 
-[Join the pilot project](/nextflow-seqera/main/join_us){: class="btn btn-primary col-3"}
+# Operational Partners
 
-<br />  
+[Australian BioCommons](https://www.biocommons.org.au/) (whose lead agent is [the University of Melbourne](https://www.unimelb.edu.au/)) operates the Australian Nextflow Seqera Service in collaboration with [Pawsey Supercomputing Research Centre](https://pawsey.org.au/), [National Computational Infrastructure (NCI)](https://nci.org.au/), and [Seqera](https://seqera.io/). The Service was established as an output of the Australian BioCommons [Bring Your Own Data Expansion Project](https://www.biocommons.org.au/byo-data-platform-expansion) and is hosted on Amazon Web Services (AWS). It is supported by [Bioplatforms Australia](https://www.bioplatforms.com/) via [NCRIS funding](https://www.education.gov.au/ncris).
+
 
 <br />  
 
