@@ -13,6 +13,8 @@ subitems:
         url: /user-guide/add-workflow
       - title: Recommendations
         url: /user-guide/hpc-recommendations
+  - title: Use cases
+    url: /user-guide/use-cases
   - title: Contact us
     url: /main/contact-us
   - title: Contributors
