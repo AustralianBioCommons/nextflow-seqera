@@ -1,11 +1,11 @@
 ---
-title: Use cases the service
+title: Organisation-level usage patterns for the Australian Nextflow Seqera Service
 contributors: [Ziad Al-Bkhetan]
 description: Organisation-level usage patterns for the Australian Nextflow Seqera Service.
 toc: false
 ---
 
-## Shared and private workspace model 
+## Shared and private workspace model
 
 Organisations typically maintain a combination of shared and private workspaces. Shared workspaces contain resources that should be available across the entire organisation, including standard workflows and compute environments.
 
